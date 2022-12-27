@@ -11,9 +11,11 @@
         </div>
         <div class="dashboard__col">
             <span class="dashdoard__title">In Work</span>
+            <reflection-task :inwork='inwork'/>
         </div>
         <div class="dashboard__col">
             <span class="dashdoard__title">Executed</span>
+            <reflection-task :executed='executed'/>
         </div>
     </div>
   </div>
@@ -31,7 +33,20 @@ export default {
     return {
         todos: [
             {id:0, name:'Name for Task', description: 'descr for Task'}, 
-        ], 
+        ],
+        inwork:[
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+        ],
+        executed:[
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+          {id:1, name:'Name for Task', description: 'descr for Task'},
+        ],
     }
   },
   methods: {
