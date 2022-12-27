@@ -8,15 +8,15 @@
 
 <script>
 export default {
- props:{
-    tasks:{
-        type: Array,
-        required: true,
+    props:{
+        todos:{
+            type:Array,
+        }
     }
- },
 }
 </script>
-<style scoped>
+
+<style>
 .task__block{
     width: 320px;
     background-color: #fff;
@@ -24,11 +24,13 @@ export default {
     border-radius: 5px;
     margin-bottom: 8px;
 }
+
 .task__block__title {
     width: 100%;
 }
 
 .task__block__desc {
     width: 100%;
+    font-size: 12px;
 }
 </style>

@@ -1,8 +1,13 @@
 <template>
-    <div class="wrapper">
+  <div class="wrapper">
     <div class="dashboard">
         <div class="dashboard__col">
-            <span class="dashdoard__title">Task</span>
+        <span class="dashdoard__title">Task</span>
+        <reflection-task :todos='todos'/>
+        <add-task 
+        :todos='todos'
+        @create='addTask'
+        />
         </div>
         <div class="dashboard__col">
             <span class="dashdoard__title">In Work</span>
@@ -13,15 +18,31 @@
     </div>
   </div>
 </template>
-
 <script>
+    import AddTask from './AddTask.vue';
+    import ReflectionTask from './ReflectionTask.vue';
 export default {
-
+    
+    components:{
+        AddTask,
+        ReflectionTask,
+    },
+      data() {
+    return {
+        todos: [
+            {id:0, name:'Name for Task', description: 'descr for Task'}, 
+        ], 
+    }
+  },
+  methods: {
+    addTask(todos){
+        this.todos.push(todos);
+    }
+  }
 }
 </script>
 
-<style scoped>
-
+<style>
   .wrapper{
     margin: 0 auto;
     width: 100vw;
