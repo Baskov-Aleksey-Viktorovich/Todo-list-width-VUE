@@ -3,8 +3,8 @@
     <div class="dashboard">
       <div class="dashboard__col">
         <span class="dashdoard__title">Task</span>
-        <task-list :todos="todos"></task-list>
-        <add-task :todos="todos" @create="addTask" />
+        <task-list :todoS="todoS"></task-list>
+        <add-task :todoS="todoS" @create="addTask" />
       </div>
       <div class="dashboard__col">
         <span class="dashdoard__title">In Work</span>
@@ -26,12 +26,12 @@ export default {
   },
   data() {
     return {
-      todos: [{ id: 0, name: "Name for Task", description: "descr for Task" }],
+      todoS: [{ id: 0, name: "Name for Task", description: "descr for Task" }],
     };
   },
   methods: {
-    addTask(todos) {
-      this.todos.push(todos);
+    addTask(todoS) {
+      this.todoS.push(todoS);
     },
   },
 };
