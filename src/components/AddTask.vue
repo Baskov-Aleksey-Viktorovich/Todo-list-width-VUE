@@ -1,9 +1,14 @@
 <template>
-    <div class="add__task">
-        <input v-model="todos.name" type="text" class="add__task__name" placeholder="Type name for Task">
-        <textarea v-model="todos.description" name="description" id="add__task__descr"
-            placeholder="Type description of Task" cols="30" rows="2"></textarea>
-        <button class="add__task__button" @click="addTask">Add Task</button>
+    <div class="task-block">
+        <input class="task-block__name" 
+        v-model="todo.name" 
+        type="text"  
+        placeholder="Type name for Task">
+        <textarea class="task-block__descr" 
+        v-model="todo.description" 
+        name="description" 
+        placeholder="Type description of Task" cols="30" rows="2"></textarea>
+        <button class="task-block__button" @click="addTask">Add Task</button>
     </div>
 </template>
 
@@ -12,7 +17,7 @@
 export default {
     data() {
         return {
-            todos: {
+            todo: {
                 name: '',
                 description: '',
             },
@@ -20,11 +25,13 @@ export default {
     },
     methods: {
         addTask() {
-            this.todos.id = Date.now();
-            if (this.todos.name != '' && this.todos.description != '') {
-                this.$emit('create', this.todos)
+            this.todo.id = Date.now();
+
+            if (this.todo.name !== '' && this.todo.description !== '') {
+                this.$emit('create', this.todo)
             }
-            this.todos = {
+
+            this.todo = {
                 name: '',
                 description: '',
             }
@@ -34,21 +41,22 @@ export default {
 </script>
 
 <style>
-.add__task {
+.task-block  {
     width: 100%;
 
 }
 
-.add__task__name {
+.task-block__name  {
     width: 100%;
     height: 40px;
 }
 
-#add__task__descr {
+.task-block__descr {
     width: 100%;
 }
 
-.add__task__button {
+.task-block__button {
     width: 100%;
 }
+
 </style>

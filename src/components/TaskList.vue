@@ -1,18 +1,16 @@
 <template>
   <div>
-    <div class="task__block" v-for="todo in todoS" :key="todo.id">
+    <div class="task__block" v-for="todo in todo" :key="todo.id">
       <span class="task__block__title">{{ todo.name }}</span>
       <p class="task__block__desc">{{ todo.description }}</p>
     </div>
   </div>
 </template>
-
-
 <script>
 
 export default {
   props: {
-    todoS: {
+    todo: {
       type: Array
     }
   }
