@@ -3,44 +3,30 @@
     <div class="dashboard">
       <div class="dashboard__col">
         <span class="dashdoard__title">Task</span>
-        <reflection-task :todos="todos" />
+        <task-list :todos="todos"></task-list>
         <add-task :todos="todos" @create="addTask" />
       </div>
       <div class="dashboard__col">
         <span class="dashdoard__title">In Work</span>
-        <reflection-task :inwork="inwork" />
       </div>
       <div class="dashboard__col">
-        <span class="dashdoard__title">Executed</span>
-        <reflection-task :executed="executed" />
+        <span class="dashdoard__title">Complete tasks</span>
       </div>
     </div>
   </div>
 </template>
 <script>
 import AddTask from "./AddTask.vue";
-import ReflectionTask from "./ReflectionTask.vue";
+import TaskList from "./TaskList.vue";
+
 export default {
   components: {
     AddTask,
-    ReflectionTask,
+    TaskList,
   },
   data() {
     return {
       todos: [{ id: 0, name: "Name for Task", description: "descr for Task" }],
-      inwork: [
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-      ],
-      executed: [
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-        { id: 1, name: "Name for Task", description: "descr for Task" },
-      ],
     };
   },
   methods: {
@@ -57,11 +43,10 @@ export default {
   width: 100vw;
   height: 100vh;
   position: relative;
-  background-image: linear-gradient(
-    rgba(0, 0, 255, 0.5),
-    rgba(255, 255, 0, 0.5)
-  );
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5),
+      rgba(255, 255, 0, 0.5));
 }
+
 /* Wrapper style */
 
 .dashboard {
@@ -81,6 +66,7 @@ export default {
   background-color: #ebecf0;
   margin: 10px;
 }
+
 .dashdoard__title {
   font-size: 18px;
   display: block;
