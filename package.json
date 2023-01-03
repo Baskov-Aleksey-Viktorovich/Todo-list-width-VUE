@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint:fix": "vue-cli-service lint —fix"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -18,7 +18,11 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-vue": "^9.8.0"
   },
   "eslintConfig": {
@@ -27,8 +31,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
+      "plugin:vue/vue3-essential"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
