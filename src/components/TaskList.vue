@@ -29,28 +29,42 @@ export default {
 };
 </script>
 
-<style>
-.task__block {
-  width: 320px;
-  background-color: #fff;
-  margin: 0 auto;
-  border-radius: 5px;
-  margin-bottom: 8px;
-  position: relative;
-}
+<style lang="scss">
+.task-list {
+  &-item {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    background: lightgray;
 
-.task__block__title {
-  width: 100%;
-}
+    &-body {
+      flex: 0 1 95%;
+    }
 
-.task__block__desc {
-  width: 100%;
-  font-size: 12px;
-}
-.task__block__delete{
-  position: absolute;
-  top: 0;
-  right: 10px;
-  cursor: pointer;
+    &-actions {
+      flex: 0 0 5%;
+
+      &__delete {
+        height: 100%;
+        background: red;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: darkred;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
 }
 </style>
