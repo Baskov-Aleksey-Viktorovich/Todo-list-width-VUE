@@ -1,26 +1,29 @@
 <template>
-    <div>
-        <div
-            class="task__block"
-            v-for="task in todo"
-            :key="task.id">
-            <span class="task__block__title">{{ task.name }}</span>
-            <p class="task__block__desc">{{ task.description }}</p>
-            <div v-on:click="deleteTask" class="task__block__delete">x</div>
+    <div class="task-list">
+        <div class="task-list-item" v-for="task in items" :key="task.id">
+            <div class="task-list-item-body">
+                <h6 class="task-list-item__title">{{ task.name }}</h6>
+                <p class="task-list-item__desc">{{ task.description }}</p>
+            </div>
+
+            <div class="task-list-item-actions">
+                <button @click="deleteTask(task.id)" class="task-list-item-actions__delete">
+                    x
+                </button>
+            </div>
         </div>
     </div>
 </template>
 <script>
-
 export default {
     props: {
-        todo: {
+        items: {
             type: Array,
         },
     },
     methods: {
-        deleteTask() {
-            this.$emit('deleteTask');
+        deleteTask(id) {
+            this.$emit('deleteTask', id);
         },
     },
 };
