@@ -2,19 +2,19 @@
     <div class="wrapper">
         <div class="dashboard">
             <div class="dashboard__col">
-                <span class="dashdoard__title"> Task {{todo.length}}</span>
-                <task-list @deleteTask="deleteTask(todo.id)" :todo="todo" ></task-list>
+                <span class="dashdoard__title">Task</span>
+                <task-list :items="todo" @deleteTask="deleteTask(todo, $event)"></task-list>
                 <add-task
                     :todo="todo"
                     @create="addTask" />
             </div>
             <div class="dashboard__col">
-                <span class="dashdoard__title">In Work {{ inwork.length }}</span>
-                <task-list @deleteTask="deleteTask(inwork.id)" :inwork="inwork"></task-list>
+                <span class="dashdoard__title">In Work</span>
+                <task-list :items="workInProgress"></task-list>
             </div>
             <div class="dashboard__col">
-                <span class="dashdoard__title">Complete tasks {{ complate.length }}</span>
-                <task-list @deleteTask="deleteTask(complate.id)" :complate="complate"></task-list>
+                <span class="dashdoard__title">Complete tasks</span>
+                <task-list :items="completedTasks"></task-list>
             </div>
         </div>
     </div>
@@ -31,18 +31,17 @@ export default {
     data() {
         return {
             todo: [ { id: 0, name: 'Name for Task', description: 'descr for Task' } ],
-            inwork: [ { id: 1, name: 'Task In work', description: 'In work' } ],
-            complate: [ { id: 2, name: 'Complate task', description: 'Complate Task' } ],
+            workInProgress: [ { id: 0, name: 'inwork 1', description: 'descr for Task' } ],
+            completedTasks: [ { id: 0, name: 'complate 1', description: 'descr for Task' } ],
         };
     },
     methods: {
         addTask(todo) {
             this.todo.push(todo);
         },
-        deleteTask(id) {
-            this.todo.splice(id, 1);
-            this.inwork.splice(id, 1);
-            this.complate.splice(id, 1);
+        deleteTask(list, idToDelete) {
+            const index = list.findIndex(({ id }) => id === idToDelete);
+            this.todo.splice(index, 1);
         },
     },
 };

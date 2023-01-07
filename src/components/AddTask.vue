@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 export default {
     data() {
         return {
@@ -29,11 +28,9 @@ export default {
     methods: {
         addTask() {
             this.todo.id = Date.now();
-
             if (this.todo.name !== '' && this.todo.description !== '') {
                 this.$emit('create', this.todo);
             }
-
             this.todo = {
                 name: '',
                 description: '',
@@ -46,21 +43,15 @@ export default {
 <style>
 .task-block  {
     width: 100%;
-
 }
-
 .task-block__name  {
     width: 100%;
     height: 40px;
-    margin-bottom: 5px;
 }
-
 .task-block__descr {
     width: 100%;
 }
-
 .task-block__button {
     width: 100%;
 }
-
 </style>
