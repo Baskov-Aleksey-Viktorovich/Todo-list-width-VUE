@@ -52,6 +52,7 @@ export default {
 .task-block__name  {
     width: 100%;
     height: 40px;
+    margin-bottom: 5px;
 }
 
 .task-block__descr {

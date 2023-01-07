@@ -2,10 +2,10 @@
     <div>
         <div
             class="task__block"
-            v-for="task in todo"
-            :key="task.id">
-            <span class="task__block__title">{{ task.name }}</span>
-            <p class="task__block__desc">{{ task.description }}</p>
+            v-for="item in todo"
+            :key="item.id">
+            <span class="task__block__title">{{ item.name }}</span>
+            <p class="task__block__desc">{{ item.description }}</p>
             <div v-on:click="deleteTask" class="task__block__delete">x</div>
         </div>
     </div>
@@ -15,6 +15,12 @@
 export default {
     props: {
         todo: {
+            type: Array,
+        },
+        inwork: {
+            type: Array,
+        },
+        complate: {
             type: Array,
         },
     },

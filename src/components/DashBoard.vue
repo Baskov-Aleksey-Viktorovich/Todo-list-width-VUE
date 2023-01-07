@@ -2,19 +2,19 @@
     <div class="wrapper">
         <div class="dashboard">
             <div class="dashboard__col">
-                <span class="dashdoard__title">Task</span>
+                <span class="dashdoard__title"> Task {{todo.length}}</span>
                 <task-list @deleteTask="deleteTask(todo.id)" :todo="todo" ></task-list>
                 <add-task
                     :todo="todo"
                     @create="addTask" />
             </div>
             <div class="dashboard__col">
-                <span class="dashdoard__title">In Work</span>
-                <task-list :inwork="inwork"></task-list>
+                <span class="dashdoard__title">In Work {{ inwork.length }}</span>
+                <task-list @deleteTask="deleteTask(inwork.id)" :inwork="inwork"></task-list>
             </div>
             <div class="dashboard__col">
-                <span class="dashdoard__title">Complete tasks</span>
-                <task-list :complate="complate"></task-list>
+                <span class="dashdoard__title">Complete tasks {{ complate.length }}</span>
+                <task-list @deleteTask="deleteTask(complate.id)" :complate="complate"></task-list>
             </div>
         </div>
     </div>
@@ -31,8 +31,8 @@ export default {
     data() {
         return {
             todo: [ { id: 0, name: 'Name for Task', description: 'descr for Task' } ],
-            inwork: [ { id: 0, name: 'Name for Task', description: 'descr for Task' } ],
-            complate: [ { id: 0, name: 'Name for Task', description: 'descr for Task' } ],
+            inwork: [ { id: 1, name: 'Task In work', description: 'In work' } ],
+            complate: [ { id: 2, name: 'Complate task', description: 'Complate Task' } ],
         };
     },
     methods: {
@@ -41,6 +41,8 @@ export default {
         },
         deleteTask(id) {
             this.todo.splice(id, 1);
+            this.inwork.splice(id, 1);
+            this.complate.splice(id, 1);
         },
     },
 };
