@@ -13,7 +13,7 @@
 <script>
 export default {
     props: {
-        items: {
+        todo: {
             type: Array,
         },
         inwork: {
@@ -54,7 +54,7 @@ export default {
         padding: 10px;
         border: none;
         cursor: pointer;
-        transition: background 0.3s ease;
+        transition: all 0.3s ease;
 
         &:hover {
           background: darkred;
