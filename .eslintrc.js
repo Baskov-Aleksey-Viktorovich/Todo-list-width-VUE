@@ -15,7 +15,7 @@ module.exports = {
         'vue',
     ],
     rules: {
-    // allow async-await
+        // allow async-await
         'generator-star-spacing': 'off',
         // allow paren-less arrow functions
         'arrow-parens': 'off',
