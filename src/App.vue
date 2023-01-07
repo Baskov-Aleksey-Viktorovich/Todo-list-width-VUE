@@ -1,6 +1,5 @@
 <template>
     <dash-board></dash-board>
-    <my-test></my-test>
 </template>
 <script>
 import DashBoard from './components/DashBoard.vue';
