@@ -7,6 +7,8 @@ module.exports = {
         'plugin:vue/vue3-essential',
         'airbnb-base',
     ],
+    overrides: [
+    ],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -35,6 +37,7 @@ module.exports = {
         // allow debugger during development only
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
         'no-console': 'warn',
+
         semi: ['error', 'always'],
         quotes: ['error', 'single'],
         indent: [
@@ -69,7 +72,8 @@ module.exports = {
             'error', {
                 before: false,
                 after: true,
-            }],
+            },
+        ],
         'no-extra-semi': 'error',
         'semi-spacing': [
             'error', {
@@ -80,14 +84,6 @@ module.exports = {
         'no-mixed-operators': ['error'],
         'object-curly-spacing': ['error', 'always', { objectsInObjects: true }],
         'array-bracket-spacing': ['error', 'always', { singleValue: true }],
-        'vue/max-attributes-per-line': ['error', {
-            singleline: {
-                max: 3,
-            },
-            multiline: {
-                max: 1,
-            },
-        }],
         'newline-before-return': 'error',
         'no-useless-catch': 'off',
         'default-case-last': 'off',

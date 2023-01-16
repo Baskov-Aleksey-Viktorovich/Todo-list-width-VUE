@@ -26,15 +26,18 @@ export default {
         };
     },
     methods: {
+        clearInput() {
+            this.todo = {
+                name: '',
+                description: '',
+            };
+        },
         addTask() {
             this.todo.id = Date.now();
             if (this.todo.name !== '' && this.todo.description !== '') {
                 this.$emit('create', this.todo);
             }
-            this.todo = {
-                name: '',
-                description: '',
-            };
+            this.clearInput();
         },
     },
 };

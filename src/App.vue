@@ -11,10 +11,6 @@ export default {
 };
 </script>
   export default{
-    data() {
-      return{
-      }
-    }
 <style>
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');

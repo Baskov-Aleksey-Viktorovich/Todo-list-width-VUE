@@ -2,7 +2,7 @@
     <div class="wrapper">
         <div class="dashboard">
             <div class="dashboard__col">
-                <span class="dashdoard__title">Task</span>
+                <span class="dashdoard__title">Task {{ todo.length }}</span>
                 <task-list :items="todo" @deleteTask="deleteTask(todo, $event)"></task-list>
                 <add-task
                     :todo="todo"
@@ -35,6 +35,7 @@ export default {
             completedTasks: [ { id: 0, name: 'complate 1', description: 'descr for Task' } ],
         };
     },
+
     methods: {
         addTask(todo) {
             this.todo.push(todo);
@@ -58,9 +59,10 @@ export default {
 }
 .dashboard {
   width: 1200px;
-  height: 80vh;
+  min-height: 80vh;
   margin: 0 auto;
   display: flex;
+
 }
 .dashboard__col {
   display: flex;

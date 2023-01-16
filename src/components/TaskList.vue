@@ -21,6 +21,7 @@ export default {
             type: Array,
         },
     },
+
     methods: {
         deleteTask(id) {
             this.$emit('deleteTask', id);
