@@ -19,6 +19,7 @@
         </div>
     </div>
 </template>
+
 <script>
 import AddTask from './AddTask.vue';
 import TaskList from './TaskList.vue';
@@ -57,13 +58,14 @@ export default {
   background-image: linear-gradient(rgba(0, 0, 255, 0.5),
       rgba(255, 255, 0, 0.5));
 }
+
 .dashboard {
   width: 1200px;
   min-height: 80vh;
   margin: 0 auto;
   display: flex;
-
 }
+
 .dashboard__col {
   display: flex;
   flex-direction: column;
@@ -74,12 +76,14 @@ export default {
   background-color: #ebecf0;
   margin: 10px;
 }
+
 .dashdoard__title {
   font-size: 18px;
   display: block;
   text-align: center;
   padding: 15px;
 }
+
 .dashboard__col__button {
   height: 40px;
   background-color: #ebecf0;

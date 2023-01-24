@@ -34,9 +34,11 @@ export default {
         },
         addTask() {
             this.todo.id = Date.now();
+
             if (this.todo.name !== '' && this.todo.description !== '') {
                 this.$emit('create', this.todo);
             }
+
             this.clearInput();
         },
     },

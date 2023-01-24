@@ -14,6 +14,7 @@
         </div>
     </div>
 </template>
+
 <script>
 export default {
     props: {
@@ -32,6 +33,7 @@ export default {
 
 <style lang="scss">
 .task-list {
+
 &-item {
   display: flex;
   align-items: stretch;
@@ -39,9 +41,11 @@ export default {
   padding-left: 16px;
   margin-bottom: 16px;
   background: lightgray;
+
   &-body {
     flex: 0 1 95%;
   }
+
   &-actions {
     flex: 0 0 5%;
     &__delete {
@@ -56,6 +60,7 @@ export default {
       }
     }
   }
+
   &__title {
     font-size: 16px;
     text-align: center;
