@@ -10,11 +10,15 @@
             </div>
             <div class="dashboard__col">
                 <span class="dashdoard__title">In Work</span>
-                <task-list :items="workInProgress"></task-list>
+                <task-list :items="workInProgress"
+                           @deleteTask="deleteTask(workInProgress, $event)">
+                </task-list>
             </div>
             <div class="dashboard__col">
                 <span class="dashdoard__title">Complete tasks</span>
-                <task-list :items="completedTasks"></task-list>
+                <task-list :items="completedTasks"
+                           @click="deleteTask(completedTasks, $event
+                           )"></task-list>
             </div>
         </div>
     </div>
@@ -32,8 +36,8 @@ export default {
     data() {
         return {
             todo: [ { id: 0, name: 'Name for Task', description: 'descr for Task' } ],
-            workInProgress: [ { id: 0, name: 'inwork 1', description: 'descr for Task' } ],
-            completedTasks: [ { id: 0, name: 'complate 1', description: 'descr for Task' } ],
+            workInProgress: [ { id: 1, name: 'inwork 1', description: 'descr for Task' } ],
+            completedTasks: [ { id: 2, name: 'complate 1', description: 'descr for Task' } ],
         };
     },
 
@@ -43,7 +47,7 @@ export default {
         },
         deleteTask(list, idToDelete) {
             const index = list.findIndex(({ id }) => id === idToDelete);
-            this.todo.splice(index, 1);
+            list.splice(index, 1);
         },
     },
 };

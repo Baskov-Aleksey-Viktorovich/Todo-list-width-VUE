@@ -16,13 +16,13 @@
 </template>
 
 <script>
+
 export default {
     props: {
         items: {
             type: Array,
         },
     },
-
     methods: {
         deleteTask(id) {
             this.$emit('deleteTask', id);
@@ -30,7 +30,6 @@ export default {
     },
 };
 </script>
-
 <style lang="scss">
 .task-list {
 

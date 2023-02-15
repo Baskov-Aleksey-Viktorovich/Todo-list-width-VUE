@@ -7,8 +7,7 @@ module.exports = {
         'plugin:vue/vue3-essential',
         'airbnb-base',
     ],
-    overrides: [
-    ],
+
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -36,7 +35,6 @@ module.exports = {
 
         // allow debugger during development only
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-        'no-console': 'warn',
 
         semi: [ 'error', 'always' ],
         quotes: [ 'error', 'single' ],
