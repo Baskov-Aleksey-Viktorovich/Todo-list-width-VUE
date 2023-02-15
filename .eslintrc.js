@@ -1,11 +1,12 @@
 module.exports = {
     env: {
         browser: true,
+        node: true,
         es2021: true,
     },
     extends: [
         'plugin:vue/vue3-essential',
-        'airbnb-base',
+        'eslint:recommended',
     ],
 
     parserOptions: {
@@ -23,14 +24,6 @@ module.exports = {
         'one-var': 'off',
         'no-unused-vars': 'warn',
 
-        'import/first': 'off',
-        'import/named': 'error',
-        'import/namespace': 'error',
-        'import/default': 'error',
-        'import/export': 'error',
-        'import/extensions': 'off',
-        'import/no-unresolved': 'off',
-        'import/no-extraneous-dependencies': 'off',
         'prefer-promise-reject-errors': 'off',
 
         // allow debugger during development only
