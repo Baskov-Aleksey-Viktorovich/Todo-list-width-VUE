@@ -20,7 +20,7 @@
 import confetti from 'canvas-confetti';
 
 export default {
-    data() {
+    data () {
         return {
             todo: {
                 name: '',
@@ -29,14 +29,14 @@ export default {
         };
     },
     methods: {
-        clearInput() {
+        clearInput () {
             this.todo = {
                 name: '',
                 description: '',
             };
         },
 
-        addTask() {
+        addTask () {
             this.todo.id = Date.now();
 
             if (this.todo.name !== '' && this.todo.description !== '') {
@@ -46,8 +46,8 @@ export default {
             this.clearInput();
         },
 
-        getConfetti() {
-            confetti();
+        getConfetti () {
+            confetti({ particleCount: 1500, spread: 300 });
         },
     },
 };
