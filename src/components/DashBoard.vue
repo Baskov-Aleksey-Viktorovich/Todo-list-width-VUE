@@ -3,20 +3,20 @@
         <div class="dashboard">
             <div class="dashboard__col">
                 <span class="dashdoard__title">Task {{ todo.length }}</span>
-                <task-list :items="todo" @deleteTask="deleteTask(todo, $event)"></task-list>
+                <task-list v-model:items="todo" @deleteTask="deleteTask(todo, $event)"></task-list>
                 <add-task
                     :todo="todo"
                     @create="addTask" />
             </div>
             <div class="dashboard__col">
                 <span class="dashdoard__title">In Work</span>
-                <task-list :items="workInProgress"
+                <task-list v-model:items="workInProgress"
                            @deleteTask="deleteTask(workInProgress, $event)">
                 </task-list>
             </div>
             <div class="dashboard__col">
                 <span class="dashdoard__title">Complete tasks</span>
-                <task-list :items="completedTasks"
+                <task-list v-model:items="completedTasks"
                            @click="deleteTask(completedTasks, $event
                            )"></task-list>
             </div>
@@ -33,7 +33,7 @@ export default {
         AddTask,
         TaskList,
     },
-    data() {
+    data () {
         return {
             todo: [ { id: 0, name: 'Name for Task', description: 'descr for Task' } ],
             workInProgress: [ { id: 1, name: 'inwork 1', description: 'descr for Task' } ],
@@ -42,10 +42,10 @@ export default {
     },
 
     methods: {
-        addTask(todo) {
+        addTask (todo) {
             this.todo.push(todo);
         },
-        deleteTask(list, idToDelete) {
+        deleteTask (list, idToDelete) {
             const index = list.findIndex(({ id }) => id === idToDelete);
             list.splice(index, 1);
         },
