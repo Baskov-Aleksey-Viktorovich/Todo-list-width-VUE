@@ -33,7 +33,7 @@ export default {
         AddTask,
         TaskList,
     },
-    data() {
+    data () {
         return {
             todo: [ { id: 0, name: 'Name for Task', description: 'descr for Task' } ],
             workInProgress: [ { id: 1, name: 'inwork 1', description: 'descr for Task' } ],
@@ -42,10 +42,10 @@ export default {
     },
 
     methods: {
-        addTask(todo) {
+        addTask (todo) {
             this.todo.push(todo);
         },
-        deleteTask(list, idToDelete) {
+        deleteTask (list, idToDelete) {
             const index = list.findIndex(({ id }) => id === idToDelete);
             list.splice(index, 1);
         },
