@@ -64,7 +64,6 @@ export default {
         addTask (todo) {
             this.todo.push(todo);
         },
-
         deleteTask (list, idToDelete) {
             const index = list.findIndex(({ id }) => id === idToDelete);
             list.splice(index, 1);
