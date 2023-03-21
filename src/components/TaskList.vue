@@ -70,6 +70,7 @@ export default {
   padding-left: 16px;
   margin-bottom: 16px;
   background: lightgray;
+  cursor: grab;
 
   &-body {
     flex: 0 1 95%;
