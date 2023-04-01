@@ -11,8 +11,10 @@
             placeholder="Type description of Task"
             cols="30"
             rows="2"></textarea>
-        <button class="task-block__button" @click="addTask">Add Task</button>
-        <button @click="getConfetti">Confetti</button>
+        <div class="task-block__wrapper">
+            <button class="task-block__button" @click="addTask">Add Task</button>
+            <button class="task-block__button" @click="getConfetti">Confetti</button>
+        </div>
     </div>
 </template>
 
@@ -52,21 +54,40 @@ export default {
     },
 };
 </script>
-<style>
+<style lang="scss">
 .task-block  {
     width: 100%;
-}
 
-.task-block__name  {
+
+&__name  {
     width: 100%;
     height: 40px;
 }
 
-.task-block__descr {
+&__descr {
     width: 100%;
 }
 
-.task-block__button {
-    width: 100%;
+&__button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    margin: 5px;
+    cursor: pointer;
+    background: #b1b1b1;
+    color: black;
+    border-radius: 8px;
+    padding: 14px 24px 16px;
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 200ms,background 200ms;
+}
+&__wrapper{
+
+    text-align: center;
+}
+&__button:hover{
+    transform: translateY(-2px);
+}
 }
 </style>

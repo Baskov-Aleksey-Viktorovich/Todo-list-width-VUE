@@ -25,7 +25,7 @@
     </ul>
 </template>
 
-<script>
+<script >
 import draggable from 'vuedraggable';
 import { computed } from 'vue';
 
@@ -46,30 +46,30 @@ export default {
             set: (value) => emit('update:items', value),
         });
 
+        function deleteTask (id) {
+            emit('deleteTask', id);
+        }
+
         return {
             tasks,
+            deleteTask,
         };
     },
 
-    methods: {
-        deleteTask (id) {
-            this.$emit('deleteTask', id);
-        },
-    },
-
-
 };
+
 </script>
 <style lang="scss">
 .task-list {
 
 &-item {
   display: flex;
+  border-radius: 5px;
   align-items: stretch;
   justify-content: space-between;
   padding-left: 16px;
   margin-bottom: 16px;
-  background: lightgray;
+  background: #b1b1b1;
   cursor: grab;
 
   &-body {
@@ -80,13 +80,13 @@ export default {
     flex: 0 0 5%;
     &__delete {
       height: 100%;
-      background: red;
+      background: red !important;
       padding: 10px;
       border: none;
       cursor: pointer;
       transition: background 0.3s ease;
       &:hover {
-        background: darkred;
+        background: darkred !important;
       }
     }
   }

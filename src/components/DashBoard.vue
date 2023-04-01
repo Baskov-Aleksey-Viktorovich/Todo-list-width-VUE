@@ -73,13 +73,13 @@ export default {
 </script>
 
 <style>
+
 .wrapper {
   margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 90vh;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 255, 0.5),
-      rgba(255, 255, 0, 0.5));
+  /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
 }
 
 .dashboard {
@@ -112,17 +112,18 @@ export default {
   background-color: #ebecf0;
   cursor: pointer;
 }
-@supports (display: flex) {
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 1608px) {
     .dashboard {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 50vw;
+      width: 100vw;
     }
-        .dashboard__col{
-        width: 40vw;
+
+    .dashboard__col{
+      width: 40vw;
     }
   }
     @media screen and (max-width: 500px) {
@@ -131,13 +132,10 @@ export default {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 0;
       width: 100vw;
     }
     .dashboard__col{
-        width: 100vw;
-        margin-bottom: 10px;
+        width: 60vw;
     }
   }
-}
 </style>
