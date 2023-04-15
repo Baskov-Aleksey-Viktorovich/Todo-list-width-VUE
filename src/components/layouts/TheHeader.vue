@@ -15,6 +15,7 @@
 </template>
 
 <script setup>
+
 import { useDark, useToggle } from '@vueuse/core';
 
 const isDark = useDark();
@@ -45,6 +46,12 @@ const toggleDark = useToggle(isDark);
     }
     &__board{
         margin: 0 0 0 15px;
+        cursor: pointer;
     }
+
+    &__login{
+        cursor: pointer;
+    }
+
     }
 </style>
