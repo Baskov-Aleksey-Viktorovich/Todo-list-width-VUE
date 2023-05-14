@@ -1,14 +1,14 @@
 <template>
     <the-header/>
-    <dash-board></dash-board>
+    <router-view></router-view>
 </template>
 <script>
 
-import DashBoard from './components/DashBoard.vue';
+/* import DashBoard from './components/DashBoard.vue'; */
 
 export default {
     components: {
-        DashBoard,
+        /* DashBoard, */
     },
 };
 </script>

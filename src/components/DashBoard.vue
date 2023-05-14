@@ -38,6 +38,11 @@ import AddTask from './AddTask.vue';
 import TaskList from './TaskList.vue';
 
 export default {
+    watch: {
+        $route (newRoute) {
+            console.log(newRoute);
+        },
+    },
     components: {
         AddTask,
         TaskList,

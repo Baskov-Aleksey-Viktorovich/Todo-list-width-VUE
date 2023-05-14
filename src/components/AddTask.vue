@@ -12,8 +12,8 @@
             cols="30"
             rows="2"></textarea>
         <div class="task-block__wrapper">
-            <button class="task-block__button" @click="addTask">Add Task</button>
-            <button class="task-block__button" @click="getConfetti">Confetti</button>
+            <base-button @click="addTask">Add Task</base-button>
+            <base-button @click="getConfetti">Confetti</base-button>
         </div>
     </div>
 </template>

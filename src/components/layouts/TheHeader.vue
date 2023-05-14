@@ -1,15 +1,21 @@
 <template>
     <header class="header">
         <div class="header__wrapper">
-            <div class="header__logo">
+            <router-link to="/main" class="header__logo">
                 <img src="@/assets/img/logo.svg" alt="logotype">
-            </div>
+            </router-link>
             <div class="header__dark bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
-                <button class="task-block__button"
-                        @click="toggleDark()">{{isDark ? "Dark" : "Light"}}</button>
+                <base-button @click="toggleDark()">{{isDark ? "Dark" : "Light"}}</base-button>
             </div>
             <div class="header__board">New DushBoard</div>
-            <div class="header__login">login / register</div>
+            <div class="header__login">
+                <router-link to="/singin">
+                    <base-button mode="singin">Sing In</base-button>
+                </router-link>
+                <router-link to="/login">
+                    <base-button>Login</base-button>
+                </router-link>
+            </div>
         </div>
     </header>
 </template>
