@@ -15,7 +15,8 @@ export default {
 
 <style lang="scss">
 /* Import fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
 .dark{
   background-color: #2C3333;

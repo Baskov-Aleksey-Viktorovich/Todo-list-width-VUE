@@ -1,16 +1,16 @@
 <template>
     <modal-card mode='login'>
         <div class="wrapper">
-            <h1>Login</h1>
+            <h1>LogIn</h1>
             <form action="">
                 <div class="form-control">
-                    <label for="email">Email</label>
-                    <input class="form__email" type="email" placeholder="Email">
+                    <label class="form-text" for="email">Email: </label>
+                    <input required class="form__email" type="email" placeholder="Email">
                 </div>
 
                 <div class="form-control">
-                    <label for="password">password</label>
-                    <input class="form__password" type="password" placeholder="Password">
+                    <label for="password">Password:</label>
+                    <input required class="form__password" type="password" placeholder="Password">
                 </div>
                 <base-button>Login</base-button>
             </form>
@@ -28,5 +28,9 @@ export default {
 .wrapper{
     text-align: center;
     padding: 50px 0 0 0;
+    border-radius: 5px;
+}
+.form-text{
+    padding: 15px;
 }
 </style>

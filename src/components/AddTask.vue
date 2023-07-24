@@ -8,7 +8,7 @@
             class="task-block__descr"
             v-model="todo.description"
             name="description"
-            placeholder="Type description of Task"
+            placeholder="Type description for Task"
             cols="30"
             rows="2"></textarea>
         <div class="task-block__wrapper">
@@ -30,6 +30,7 @@ export default {
             },
         };
     },
+
     methods: {
         clearInput () {
             this.todo = {
@@ -44,7 +45,6 @@ export default {
             if (this.todo.name !== '' && this.todo.description !== '') {
                 this.$emit('create', this.todo);
             }
-
             this.clearInput();
         },
 

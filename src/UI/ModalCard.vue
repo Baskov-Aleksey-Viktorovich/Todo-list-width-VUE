@@ -1,6 +1,8 @@
 <template>
-    <div :class='mode'>
-        <slot></slot>
+    <div class="wrapper">
+        <div :class='mode'>
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -18,16 +20,17 @@ export default {
         position: relative;
     }
     .login{
-        width: 20%;
+        width: 50%;
         height: 25vh;
         border: 5px solid #b1b1b1;
         border-radius: 5px;
     }
+
     .singin{
-        width: 20%;
+        width: 50%;
         height: 25vh;
         border: 5px solid #b1b1b1;
         border-radius: 5px;
     }
-</style>>
+</style>
 

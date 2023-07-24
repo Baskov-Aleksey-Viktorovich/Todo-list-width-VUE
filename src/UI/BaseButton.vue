@@ -27,11 +27,12 @@ export default {
     transition: transform 200ms,background 200ms;
     }
 
+
     button:hover{
     transform: translateY(-2px);
 }
 
-.singin{
+.select{
     display: inline-block;
     outline: 0;
     border: 0;

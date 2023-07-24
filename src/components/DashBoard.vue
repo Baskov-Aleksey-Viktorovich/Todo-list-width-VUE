@@ -4,11 +4,8 @@
             <div class="dashboard__col">
                 <span class="dashdoard__title">Task {{ todo.length }}</span>
 
-                <task-list
-                    v-model:items="todo"
-                    @deleteTask="deleteTask(todo, $event)">
+                <task-list v-model:items="todo" @deleteTask="deleteTask(todo, $event)">
                 </task-list>
-
                 <add-task
                     :todo="todo"
                     @create="addTask" />
@@ -18,7 +15,7 @@
 
                 <task-list
                     v-model:items="workInProgress"
-                    @deleteTask="deleteTask(workInProgress, $event)">
+                    @deleteTask="deleteTask(workInProgress, $event)" v-if="workInProgress.length > 0">
                 </task-list>
             </div>
             <div class="dashboard__col">

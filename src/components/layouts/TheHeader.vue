@@ -10,10 +10,10 @@
             <div class="header__board">New DushBoard</div>
             <div class="header__login">
                 <router-link to="/singin">
-                    <base-button mode="singin">Sing In</base-button>
+                    <base-button :class="{'select': isActive === 0}" @click="makeActive(0)">Sing In</base-button>
                 </router-link>
                 <router-link to="/login">
-                    <base-button>Login</base-button>
+                    <base-button :class="{'select': isActive === 1}" @click="makeActive(1)">Login</base-button>
                 </router-link>
             </div>
         </div>
@@ -24,10 +24,26 @@
 
 import { useDark, useToggle } from '@vueuse/core';
 
-const isDark = useDark();
+const isDark     = useDark();
 const toggleDark = useToggle(isDark);
 
 </script>
+
+<script>
+export default {
+    data (){
+        return {
+            isActive: null,
+        };
+    },
+    methods: {
+        makeActive (index){
+            this.isActive = index;
+        },
+    },
+};
+</script>
+
 
 <style lang="scss">
 
@@ -36,6 +52,7 @@ const toggleDark = useToggle(isDark);
         top: 0;
         background-color: transparent;
         z-index: 1004;
+
     &__wrapper{
         display: flex;
         width: 100wv;
@@ -47,6 +64,7 @@ const toggleDark = useToggle(isDark);
         justify-content: space-around;
     }
 
+
     &__dark{
         padding: 10px;
     }
@@ -57,6 +75,19 @@ const toggleDark = useToggle(isDark);
 
     &__login{
         cursor: pointer;
+    }
+
+
+        @media screen and (max-width: 500px) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      padding: 200px;
+    }
+
     }
 
     }
