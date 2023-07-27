@@ -12,24 +12,29 @@ export default {
 };
 </script>
 
-<style scoped>
-    div{
-        margin: 0 auto;
-        width: 50%;
-        height: 30vh;
-        position: relative;
+<style >
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        margin:  auto;
     }
     .login{
-        width: 50%;
-        height: 25vh;
-        border: 5px solid #b1b1b1;
+        max-height: 28%;
+        max-width: 25%;
+        border: 2px solid #b1b1b1;
         border-radius: 5px;
+        align-self: center;
+        margin: auto;
     }
 
     .singin{
-        width: 50%;
-        height: 25vh;
-        border: 5px solid #b1b1b1;
+        align-self: center;
+        max-height: 25%;
+        max-width: 45%;
+        border: 2px solid #b1b1b1;
         border-radius: 5px;
     }
 </style>

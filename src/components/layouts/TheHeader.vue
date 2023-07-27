@@ -2,18 +2,32 @@
     <header class="header">
         <div class="header__wrapper">
             <router-link to="/main" class="header__logo">
-                <img src="@/assets/img/logo.svg" alt="logotype">
+                <img class="logo" src="@/assets/img/logo.svg" alt="logotype">
             </router-link>
             <div class="header__dark bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
-                <base-button @click="toggleDark()">{{isDark ? "Dark" : "Light"}}</base-button>
+                <base-button
+                    @click="toggleDark()">{{isDark ? "Dark" : "Light"}}
+                    <img src="@/assets/img/icons/SVG/brightness-contrast.svg" alt="sun">
+                </base-button>
             </div>
-            <div class="header__board">New DushBoard</div>
+            <div class="header__board">
+                <router-link to="/new-dash">
+                    <base-button>New Dash Board</base-button>
+                </router-link>
+            </div>
             <div class="header__login">
                 <router-link to="/singin">
-                    <base-button :class="{'select': isActive === 0}" @click="makeActive(0)">Sing In</base-button>
+                    <base-button :class="{'select': isActive === 0}" @click="makeActive(0)">
+                        <img src="@/assets/img/icons/SVG/hand-paper-o.svg" alt="">
+                        Sing In
+                    </base-button>
                 </router-link>
                 <router-link to="/login">
-                    <base-button :class="{'select': isActive === 1}" @click="makeActive(1)">Login</base-button>
+                    <base-button
+                        :class="{'select': isActive === 1}"
+                        @click="makeActive(1)">
+                        <img src="@/assets/img/icons/SVG/hand-peace-o.svg" alt="">
+                        Login</base-button>
                 </router-link>
             </div>
         </div>
@@ -77,18 +91,16 @@ export default {
         cursor: pointer;
     }
 
-
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 749px) {
     &__wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      width: 100vw;
-      padding: 200px;
+      width: 100%;
+      height: 20%;
+    }}
+    .logo{
+        width: 70%;
     }
-
-    }
-
     }
 </style>

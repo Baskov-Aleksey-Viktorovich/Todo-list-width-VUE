@@ -12,7 +12,9 @@
             cols="30"
             rows="2"></textarea>
         <div class="task-block__wrapper">
-            <base-button @click="addTask">Add Task</base-button>
+            <base-button @click="addTask">
+                <img src="@/assets/img/icons/SVG/plus.svg" alt="">
+                Add Task</base-button>
             <base-button @click="getConfetti">Confetti</base-button>
         </div>
     </div>

@@ -77,16 +77,16 @@ export default {
 <style>
 
 .wrapper {
+  position: relative;
   margin: 0 auto;
   width: 100%;
-  height: 90vh;
-  position: relative;
+  height: 100%;
   /* background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); */
 }
 
 .dashboard {
-  width: 1200px;
-  min-height: 80vh;
+  width: 80%;
+  min-height: 80%;
   margin: 0 auto;
   display: flex;
 }

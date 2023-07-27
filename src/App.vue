@@ -13,6 +13,7 @@ export default {
 };
 </script>
 
+
 <style lang="scss">
 /* Import fonts */
 
@@ -32,9 +33,15 @@ export default {
     color: white;
     background: #424242;
   }
+
   .dashboard__col{
     background: #808080;
   }
+}
+
+img{
+  height: 10%;
+  width: 20%;
 }
 /* Reset Styles */
 

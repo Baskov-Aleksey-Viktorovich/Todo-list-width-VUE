@@ -6,9 +6,13 @@ import ModalCard from './UI/ModalCard.vue';
 import DashBoard from './components/DashBoard.vue';
 import UserLogin   from './pages/auth/UserLogin.vue';
 import UserSingin   from './pages/auth/UserSingin.vue';
-import { initializeApp } from 'firebase/app';
+import AddDushBoard from './pages/auth/AddDushBoard.vue';
 
+//router
 import { createRouter, createWebHistory } from 'vue-router';
+//
+
+
 
 const router = createRouter({
     history: createWebHistory(),
@@ -17,11 +21,20 @@ const router = createRouter({
         { path: '/main', component: DashBoard },
         { path: '/login', component: UserLogin },
         { path: '/singin', component: UserSingin },
-
+        { path: '/new-dash', component: AddDushBoard },
     ],
 });
 
 
+// import firebase
+// Import the functions you need from the SDKs you need
+import { initializeApp } from 'firebase/app';
+import { getAnalytics } from 'firebase/analytics';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: 'AIzaSyBwRSvlOJFkk6AtmcRCv73oQy4s6rVLDz0',
     authDomain: 'todo-cf1b6.firebaseapp.com',
@@ -32,11 +45,9 @@ const firebaseConfig = {
     measurementId: 'G-EVEKFWMDJX',
 };
 
-initializeApp(firebaseConfig);
 
 
-
-const app = createApp(App);
+const app =  createApp(App);
 app.use(router);
 app.component('the-header', TheHeader);
 app.component('base-button', BaseButton);

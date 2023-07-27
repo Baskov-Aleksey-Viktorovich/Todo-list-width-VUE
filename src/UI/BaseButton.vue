@@ -14,14 +14,16 @@ export default {
 
     button{
     display: inline-block;
+    vertical-align: middle;
     outline: 0;
     border: 0;
     margin: 5px;
     cursor: pointer;
+    height: 40%;
+    padding: 10px;
     background: #b1b1b1;
     color: black;
     border-radius: 8px;
-    padding: 14px 24px 16px;
     font-size: 18px;
     line-height: 1;
     transition: transform 200ms,background 200ms;
@@ -49,6 +51,7 @@ export default {
 }
 .modal{
     width: 100%;
+    max-height: 10%;
     outline: 0;
     border: 0;
     margin: 5px;
@@ -58,7 +61,7 @@ export default {
     color: black;
     border-radius: 8px;
     padding: 14px 24px 16px;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1;
     transition: transform 200ms,background 200ms;
 }

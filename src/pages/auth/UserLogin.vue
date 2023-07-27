@@ -1,7 +1,10 @@
 <template>
     <modal-card mode='login'>
         <div class="wrapper">
-            <h1>LogIn</h1>
+            <div class="wrapper__header">
+                <h1>LogIn</h1>
+                <img src="@/assets/img/icons/SVG/happy1.svg" alt="h1">
+            </div>
             <form action="">
                 <div class="form-control">
                     <label class="form-text" for="email">Email: </label>
@@ -19,18 +22,21 @@
 </template>
 
 <script>
+
+
 export default {
     props: [ 'mode' ],
 };
 </script>
 
-<style>
-.wrapper{
-    text-align: center;
-    padding: 50px 0 0 0;
-    border-radius: 5px;
-}
+<style >
 .form-text{
     padding: 15px;
+}
+.wrapper__header{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    margin: auto;
 }
 </style>
