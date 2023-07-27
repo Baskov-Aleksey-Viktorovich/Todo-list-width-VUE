@@ -14,8 +14,13 @@
                 <div class="form-control">
                     <label for="password">Password:</label>
                     <input required class="form__password" type="password" placeholder="Password">
+                    <base-button>Login</base-button>
+                    <span>OR</span>
+                    <base-button>
+                        Continue width Google
+                        <img class="sing-ing" src="@/assets/img/icons/SVG/google1.svg" alt="">
+                    </base-button>
                 </div>
-                <base-button>Login</base-button>
             </form>
         </div>
     </modal-card>
@@ -29,14 +34,21 @@ export default {
 };
 </script>
 
-<style >
-.form-text{
-    padding: 15px;
-}
-.wrapper__header{
-    display: flex;
-    justify-content: space-between;
-    width: 55%;
-    margin: auto;
-}
+<style>
+    .wrapper__header{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .form-text{
+        padding: 15px;
+    }
+    .form-control{
+        display: flex;
+        flex-direction: column;
+        vertical-align: middle;
+        text-align: center;
+    }
 </style>

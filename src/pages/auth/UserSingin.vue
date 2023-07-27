@@ -9,16 +9,18 @@
                 <div class="form-control">
                     <label class="form-text" for="email" >Email</label>
                     <input class="form__email" type="email" placeholder="Email" v-model="email" >
-                </div>
-
-                <div class="form-control">
                     <label class="form-text" for="password">Password: </label>
                     <input class="form__password" type="password" placeholder="Password" v-model="password">
+                    <base-button>Sing in</base-button>
                 </div>
-                <base-button>
-                    <img class="sing-ing" src="@/assets/img/icons/SVG/google1.svg" alt="">
-                </base-button>
-                <base-button>Sing in</base-button>
+
+                <span>OR</span>
+                <div class="form-control">
+                    <base-button>
+                        Continue width Google
+                        <img class="sing-ing" src="@/assets/img/icons/SVG/google1.svg" alt="">
+                    </base-button>
+                </div>
             </form>
         </div>
     </modal-card>
@@ -38,7 +40,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 
     .wrapper__header{
         display: flex;
@@ -51,7 +53,14 @@ export default {
         padding: 15px;
     }
     .sing-ing{
-        width: 50%;
+        align-items: center;
+        width: 10%;
+    }
+    .form-control{
+        display: flex;
+        flex-direction: column;
+        vertical-align: middle;
+        text-align: center;
     }
 
 

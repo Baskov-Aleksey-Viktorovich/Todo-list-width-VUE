@@ -10,25 +10,26 @@
                     <img src="@/assets/img/icons/SVG/brightness-contrast.svg" alt="sun">
                 </base-button>
             </div>
-            <div class="header__board">
+            <!--             <div class="header__board">
                 <router-link to="/new-dash">
                     <base-button>New Dash Board</base-button>
                 </router-link>
-            </div>
-            <div class="header__login">
-                <router-link to="/singin">
-                    <base-button :class="{'select': isActive === 0}" @click="makeActive(0)">
+            </div> -->
+            <div class="header__auth">
+                <base-button :class="{'select': isActive === 0}" @click="makeActive(0)">
+                    <router-link to="/singin">
                         <img src="@/assets/img/icons/SVG/hand-paper-o.svg" alt="">
                         Sing In
-                    </base-button>
-                </router-link>
-                <router-link to="/login">
-                    <base-button
-                        :class="{'select': isActive === 1}"
-                        @click="makeActive(1)">
+                    </router-link>
+                </base-button>
+                <base-button
+                    :class="{'select': isActive === 1}"
+                    @click="makeActive(1)">
+                    <router-link to="/login">
                         <img src="@/assets/img/icons/SVG/hand-peace-o.svg" alt="">
-                        Login</base-button>
-                </router-link>
+                        Login
+                    </router-link>
+                </base-button>
             </div>
         </div>
     </header>
@@ -69,13 +70,14 @@ export default {
 
     &__wrapper{
         display: flex;
-        width: 100wv;
-        height: 10vh;
+        margin: 0 auto;
+        width: 80%;
+        height: 20%;
         align-items: center;
         position: relative;
         padding: 0 10px 0 10px;
         font-size: 18px;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
 
@@ -87,7 +89,8 @@ export default {
         cursor: pointer;
     }
 
-    &__login{
+    &__auth{
+        display: flex;
         cursor: pointer;
     }
 
@@ -97,7 +100,7 @@ export default {
       flex-direction: column;
       align-items: center;
       width: 100%;
-      height: 20%;
+      height: 10%;
     }}
     .logo{
         width: 70%;

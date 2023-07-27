@@ -1,6 +1,9 @@
 import { createApp } from 'vue';
 import App from './App.vue';
+
 import TheHeader from './components/layouts/TheHeader.vue';
+import TheMain from './components/layouts/TheMain.vue';
+
 import BaseButton from './UI/BaseButton.vue';
 import ModalCard from './UI/ModalCard.vue';
 import DashBoard from './components/DashBoard.vue';
@@ -18,7 +21,7 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: '/', redirect: '/main' },
-        { path: '/main', component: DashBoard },
+        { path: '/main', component: TheMain },
         { path: '/login', component: UserLogin },
         { path: '/singin', component: UserSingin },
         { path: '/new-dash', component: AddDushBoard },

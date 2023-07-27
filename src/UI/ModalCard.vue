@@ -22,18 +22,15 @@ export default {
         margin:  auto;
     }
     .login{
-        max-height: 28%;
-        max-width: 25%;
+        align-self: center;
+        max-height: 25%;
         border: 2px solid #b1b1b1;
         border-radius: 5px;
-        align-self: center;
-        margin: auto;
     }
 
     .singin{
         align-self: center;
         max-height: 25%;
-        max-width: 45%;
         border: 2px solid #b1b1b1;
         border-radius: 5px;
     }

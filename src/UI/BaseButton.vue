@@ -10,10 +10,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 
     button{
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
     vertical-align: middle;
     outline: 0;
     border: 0;
@@ -36,6 +37,7 @@ export default {
 
 .select{
     display: inline-block;
+      align-self: center;
     outline: 0;
     border: 0;
     margin: 5px;
@@ -44,13 +46,14 @@ export default {
     background: transparent;
     color: black;
     border-radius: 8px;
-    padding: 14px 24px 16px;
+    padding: 14px 18px 16px;
     font-size: 18px;
     line-height: 1;
     transition: transform 200ms,background 200ms;
 }
 .modal{
     width: 100%;
+    align-self: center;
     max-height: 10%;
     outline: 0;
     border: 0;
