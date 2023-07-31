@@ -1,5 +1,5 @@
 <template>
-    <button :type="type" :class="mode">
+    <button class="main-button" :type="type" :class="mode">
         <slot></slot>
     </button>
 </template>
@@ -12,9 +12,10 @@ export default {
 
 <style>
 
-    button{
+    .main-button{
     display: flex;
     justify-content: space-around;
+    text-decoration: none;
     vertical-align: middle;
     outline: 0;
     border: 0;
@@ -30,8 +31,12 @@ export default {
     transition: transform 200ms,background 200ms;
     }
 
+.main-button > a {
+    text-decoration: none;
+    color: black;
+}
 
-    button:hover{
+    .main-button:hover{
     transform: translateY(-2px);
 }
 

@@ -13,8 +13,9 @@ import AddDushBoard from './pages/auth/AddDushBoard.vue';
 
 //router
 import { createRouter, createWebHistory } from 'vue-router';
-//
 
+import { initializeApp } from 'firebase/app';
+//
 
 
 const router = createRouter({
@@ -25,30 +26,18 @@ const router = createRouter({
         { path: '/login', component: UserLogin },
         { path: '/singin', component: UserSingin },
         { path: '/new-dash', component: AddDushBoard },
+        { path: '/task-board', component: DashBoard },
     ],
 });
 
-
-// import firebase
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: 'AIzaSyBwRSvlOJFkk6AtmcRCv73oQy4s6rVLDz0',
-    authDomain: 'todo-cf1b6.firebaseapp.com',
-    projectId: 'todo-cf1b6',
-    storageBucket: 'todo-cf1b6.appspot.com',
-    messagingSenderId: '89091472753',
-    appId: '1:89091472753:web:2e22a1706b143683bfcad0',
-    measurementId: 'G-EVEKFWMDJX',
-};
-
-
+initializeApp({
+    apiKey: 'AIzaSyBY6RUmbZwpG1bVCKr9fma3keIvBpDgmgk',
+    authDomain: 'todo-auth-16ee1.firebaseapp.com',
+    projectId: 'todo-auth-16ee1',
+    storageBucket: 'todo-auth-16ee1.appspot.com',
+    messagingSenderId: '32565768580',
+    appId: '1:32565768580:web:5909f39601842dac4badd1',
+});
 
 const app =  createApp(App);
 app.use(router);

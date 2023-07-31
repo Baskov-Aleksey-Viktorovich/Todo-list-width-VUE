@@ -12,9 +12,11 @@
                 </div>
 
                 <div class="form-control">
-                    <label for="password">Password:</label>
+                    <label class="form-text" for="password">Password:</label>
                     <input required class="form__password" type="password" placeholder="Password">
-                    <base-button>Login</base-button>
+                    <router-link to="/task-board">
+                        Continue
+                    </router-link>
                     <span>OR</span>
                     <base-button>
                         Continue width Google

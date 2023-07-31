@@ -22,6 +22,7 @@ export default {
 .dark{
   background-color: #2C3333;
   color: white;
+
   li{
     background-color: #424242;
   }
@@ -33,6 +34,13 @@ export default {
     color: white;
     background: #424242;
   }
+
+a{
+  color: white;
+}
+img{
+  color: white;
+}
 
   .dashboard__col{
     background: #808080;

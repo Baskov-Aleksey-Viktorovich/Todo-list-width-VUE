@@ -16,20 +16,15 @@
                 </router-link>
             </div> -->
             <div class="header__auth">
-                <base-button :class="{'select': isActive === 0}" @click="makeActive(0)">
-                    <router-link to="/singin">
-                        <img src="@/assets/img/icons/SVG/hand-paper-o.svg" alt="">
-                        Sing In
-                    </router-link>
-                </base-button>
-                <base-button
-                    :class="{'select': isActive === 1}"
-                    @click="makeActive(1)">
-                    <router-link to="/login">
-                        <img src="@/assets/img/icons/SVG/hand-peace-o.svg" alt="">
-                        Login
-                    </router-link>
-                </base-button>
+                <router-link class="main-button" :class="{'select': isActive === 0}" @click="makeActive(0)" to="/singin">
+                    <img src="@/assets/img/icons/SVG/hand-paper-o.svg" alt="">
+                    Sing In
+                </router-link>
+
+                <router-link class="main-button" :class="{'select': isActive === 1}" @click="makeActive(1)" to="/login">
+                    <img src="@/assets/img/icons/SVG/hand-peace-o.svg" alt="">
+                    Login
+                </router-link>
             </div>
         </div>
     </header>
@@ -37,7 +32,11 @@
 
 <script setup>
 
+
 import { useDark, useToggle } from '@vueuse/core';
+
+
+
 
 const isDark     = useDark();
 const toggleDark = useToggle(isDark);
@@ -48,7 +47,7 @@ const toggleDark = useToggle(isDark);
 export default {
     data (){
         return {
-            isActive: null,
+            isActive: undefined,
         };
     },
     methods: {
@@ -99,6 +98,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
       width: 100%;
       height: 10%;
     }}
